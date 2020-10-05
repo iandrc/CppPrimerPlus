@@ -18,7 +18,6 @@ struct CandyBar {
   unsigned calories;
 };
 
-
 int main() {
   CandyBar snack = { "Mocha Munch", 2.3, 350 };
 

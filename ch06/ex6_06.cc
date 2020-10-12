@@ -40,23 +40,33 @@ int main() {
     std::cin >> contributors[i].amount;
   }
 
-  std::cout << "Grand Patrons" << std::endl;
+  bool isEmpty = false;
+  std::cout << "\nGrand Patrons" << std::endl;
   for (int j = 0; j < numberOfContributors; j++) {
     if (contributors[j].amount >= GRAND_PATRON_CONTRIBUTION) {
       std::cout << contributors[j].contributorName << " - $"
                 << contributors[j].amount << std::endl;
+      isEmpty = true;
       continue;
     }
   }
 
-  std::cout << "Patrons" << std::endl;
+  if (!isEmpty)
+    std::cout << "None" << std::endl;
+
+  isEmpty = false;
+  std::cout << "\nPatrons" << std::endl;
   for (int k = 0; k < numberOfContributors; k++) {
     if (!(contributors[k].amount >= GRAND_PATRON_CONTRIBUTION)) {
       std::cout << contributors[k].contributorName << " - $"
                 << contributors[k].amount << std::endl;
+      isEmpty = true;;
       continue;
     }
   }
+
+  if (!isEmpty)
+    std::cout << "None" << std::endl;
 
   delete [] contributors;
 

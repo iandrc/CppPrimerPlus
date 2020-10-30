@@ -41,6 +41,8 @@ int main() {
   show(testing, 3);
   show("Done!");
 
+  delete [] beany.str;
+
   return 0;
 }
 

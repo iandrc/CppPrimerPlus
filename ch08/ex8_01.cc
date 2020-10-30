@@ -34,8 +34,7 @@ int main() {
 void repeatString(const std::string str, int n) {
   static int count = 0;
   count++;
-  // std::cout << str << std::endl;
-  // std::cout << n << std::endl;
+  
   if (!n) {
     std::cout << str << ' ';
   } else {

@@ -14,9 +14,9 @@ T max5(T arr[]);
 
 int main() {
   int intNums[ARR_LENGTH] = {1, 2, 3, 4, 5};
-  double doubleNums[ARR_LENGTH] = {1.0, 2.0, 3.0, 5.5, 5.6};
-
   std::cout << "The largest item in intNums = " << max5(intNums) << std::endl;
+
+  double doubleNums[ARR_LENGTH] = {1.0, 2.0, 3.0, 5.5, 5.6};
   std::cout << "The largest item in doubleNums = " << max5(doubleNums) << std::endl;
 
   return 0;
@@ -24,9 +24,9 @@ int main() {
 
 template<typename T>
 T max5(T arr[]) {
-  T tempMax = 0;
+  T tempMax = arr[0];
 
-  for (int i = 0; i < ARR_LENGTH; i++)
+  for (int i = 1; i < ARR_LENGTH; i++)
     if (arr[i] > tempMax)
       tempMax = arr[i];
 

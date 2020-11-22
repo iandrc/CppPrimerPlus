@@ -1,5 +1,4 @@
 // golf.cc -- implementing golf.h
-
 #include <iostream>
 #include <cstring>
 #include "golf.h"

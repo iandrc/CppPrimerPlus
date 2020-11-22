@@ -1,5 +1,4 @@
 // golf.h -- for ex9_01.cc
-
 #ifndef GOLF_H_
 #define GOLF_H_
 

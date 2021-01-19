@@ -58,6 +58,8 @@ int main() {
     stepsFile << "Average outward distance per step = "
               << result.magval() / steps << "\n";
 
+    stepsFile.close();
+
     steps = 0;
     result.reset(0.0, 0.0);
     std::cout << "The results was saved to \"steps.txt\" file.\n";

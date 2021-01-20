@@ -23,12 +23,13 @@ int main() {
   std::srand(std::time(0));
 
   double direction;
-  Vector step;
-  Vector result(0.0, 0.0);
   unsigned long steps = 0;
   double target;
   double dstep;
 
+  Vector step;
+  Vector result(0.0, 0.0);
+  
   std::cout << "Enter target distance (q to quit): ";
   while (std::cin >> target) {
     std::cout << "Enter step length: ";

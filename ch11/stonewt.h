@@ -35,6 +35,14 @@ class Stonewt {
     Stonewt operator*(double x);
     friend Stonewt operator*(double x, Stonewt& s);
 
+    // relational operators overloading
+    friend bool operator<(const Stonewt& s1, const Stonewt& s2);
+    friend bool operator<=(const Stonewt& s1, const Stonewt& s2);
+    friend bool operator>(const Stonewt& s1, const Stonewt& s2);
+    friend bool operator>=(const Stonewt& s1, const Stonewt& s2);
+    friend bool operator==(const Stonewt& s1, const Stonewt& s2);
+    friend bool operator!=(const Stonewt& s1, const Stonewt& s2);
+
     friend std::ostream& operator<<(std::ostream& os, const Stonewt& st);
 };
 

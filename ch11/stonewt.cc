@@ -6,7 +6,7 @@ Stonewt::Stonewt(double lbs) {
   stone = int (lbs) / LBS_PER_STN; // integer division
   pds_left = int (lbs) % LBS_PER_STN + lbs - int (lbs);
   pounds = lbs;
-  form = FORM::STONE;
+  form = FORM::POUNDS_DOUBLE;
 }
 
 Stonewt::Stonewt(int stn, double lbs, Stonewt::FORM f) {
@@ -59,6 +59,30 @@ Stonewt Stonewt::operator*(double x) {
 
 Stonewt operator*(double x, Stonewt& s) {
   return s * x;
+}
+
+bool operator<(const Stonewt& s1, const Stonewt& s2) {
+  return s1.pounds < s2.pounds;
+}
+
+bool operator<=(const Stonewt& s1, const Stonewt& s2) {
+  return s1.pounds <= s2.pounds;
+}
+
+bool operator>(const Stonewt& s1, const Stonewt& s2) {
+  return s1.pounds > s2.pounds;
+}
+
+bool operator>=(const Stonewt& s1, const Stonewt& s2) {
+  return s1.pounds >= s2.pounds;
+}
+
+bool operator==(const Stonewt& s1, const Stonewt& s2) {
+  return s1.pounds == s2.pounds;
+}
+
+bool operator!=(const Stonewt& s1, const Stonewt& s2) {
+  return s1.pounds != s2.pounds;
 }
 
 std::ostream& operator<<(std::ostream& os, const Stonewt& st) {
